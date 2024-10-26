@@ -10,5 +10,3 @@ CREATE TABLE IF NOT EXISTS users (
     role            VARCHAR(30) NOT NULL,
     address         TEXT
 );
-
-
