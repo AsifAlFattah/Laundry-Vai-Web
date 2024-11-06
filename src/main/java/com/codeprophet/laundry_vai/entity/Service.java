@@ -22,6 +22,9 @@ public class Service {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Column(name = "image_url", length = Integer.MAX_VALUE)
+    private String imageUrl;
+
     @Column(name = "description", length = Integer.MAX_VALUE)
     private String description;
 
@@ -31,7 +34,5 @@ public class Service {
     @Column(name = "availability", nullable = false)
     private Boolean availability = false;
 
-    @OneToMany(mappedBy = "service")
-    private Set<OrderService> orderServices = new LinkedHashSet<>();
 
 }

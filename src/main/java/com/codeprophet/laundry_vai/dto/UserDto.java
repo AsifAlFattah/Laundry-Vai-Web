@@ -2,6 +2,8 @@ package com.codeprophet.laundry_vai.dto;
 
 import com.codeprophet.laundry_vai.entity.Feedback;
 import com.codeprophet.laundry_vai.entity.Order;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.Value;
 
 import java.io.Serializable;
@@ -10,7 +12,8 @@ import java.util.Set;
 /**
  * DTO for {@link com.codeprophet.laundry_vai.entity.User}
  */
-@Value
+@Getter
+@Setter
 public class UserDto implements Serializable {
     Long id;
     String name;
@@ -19,6 +22,4 @@ public class UserDto implements Serializable {
     String phone;
     String role;
     String address;
-    Set<Feedback> feedbacks;
-    Set<Order> orders;
 }

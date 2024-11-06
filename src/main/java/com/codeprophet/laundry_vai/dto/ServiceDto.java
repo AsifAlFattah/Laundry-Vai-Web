@@ -1,6 +1,8 @@
 package com.codeprophet.laundry_vai.dto;
 
 import com.codeprophet.laundry_vai.entity.OrderService;
+import lombok.Getter;
+import lombok.Setter;
 import lombok.Value;
 
 import java.io.Serializable;
@@ -10,12 +12,13 @@ import java.util.Set;
 /**
  * DTO for {@link com.codeprophet.laundry_vai.entity.Service}
  */
-@Value
+@Getter
+@Setter
 public class ServiceDto implements Serializable {
     Long id;
     String name;
+    String imageUrl;
     String description;
     BigDecimal price;
     Boolean availability;
-    Set<OrderService> orderServices;
 }

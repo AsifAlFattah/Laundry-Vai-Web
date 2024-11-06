@@ -36,10 +36,4 @@ public class User {
     @Column(name = "address", length = Integer.MAX_VALUE)
     private String address;
 
-    @OneToMany(mappedBy = "user")
-    private Set<Feedback> feedbacks = new LinkedHashSet<>();
-
-    @OneToMany(mappedBy = "user")
-    private Set<Order> orders = new LinkedHashSet<>();
-
 }

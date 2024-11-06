@@ -7,6 +7,7 @@ import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
@@ -32,6 +33,6 @@ public class Payment {
 
     @ColumnDefault("CURRENT_TIMESTAMP")
     @Column(name = "payment_date", nullable = false)
-    private Instant paymentDate;
+    private LocalDateTime paymentDate;
 
 }

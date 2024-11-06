@@ -7,6 +7,7 @@ import lombok.Setter;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -34,19 +35,11 @@ public class Order {
 
     @ColumnDefault("CURRENT_TIMESTAMP")
     @Column(name = "created_at", nullable = false)
-    private Instant createdAt;
+    private LocalDateTime createdAt;
 
     @ColumnDefault("CURRENT_TIMESTAMP")
     @Column(name = "updated_at", nullable = false)
-    private Instant updatedAt;
+    private LocalDateTime updatedAt;
 
-    @OneToMany(mappedBy = "order")
-    private Set<Feedback> feedbacks = new LinkedHashSet<>();
-
-    @OneToMany(mappedBy = "order")
-    private Set<OrderService> orderServices = new LinkedHashSet<>();
-
-    @OneToMany(mappedBy = "order")
-    private Set<Payment> payments = new LinkedHashSet<>();
 
 }
